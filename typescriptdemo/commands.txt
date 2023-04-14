@@ -1,0 +1,16 @@
+create directory typescriptdemos
+cd typescriptdemos
+npm install typescript --save-dev
+npx tsc
+npx tsc --init // this will create tsconfig.json
+modify tsconfig.json and add the following lines
+{
+"include": ["src"],
+"compilerOptions": {
+"outDir": "./build"
+}
+}
+create 2 subfolders - src and build
+create demo1.ts file in src folder with typescript code
+compile them with - npx tsc
+run the compiled javascript - node build/demo1.js
