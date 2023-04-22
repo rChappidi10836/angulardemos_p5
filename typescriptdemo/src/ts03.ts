@@ -35,7 +35,7 @@ const mysafecar: ISafeCar = {
     make: "Bugati",
     model: "ROCKET",
     year: 2023,
-    colour: "GReenish Gold",
+    colour: "GReenish Gold", 
     airbags: 6,
 };
 console.log(mysafecar);

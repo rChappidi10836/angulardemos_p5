@@ -1,0 +1,13 @@
+<!-- <div class="container w-25 border">
+    <p>this is a wonder product</p>
+</div> -->
+
+<app-addproduct (productAdded)="onAddProduct($event)"></app-addproduct>
+
+<div class="row">
+    <div class="col-xs-12">
+        <app-product 
+            *ngFor="let myproduct of products" 
+            [product]="myproduct"></app-product>
+    </div>
+</div>

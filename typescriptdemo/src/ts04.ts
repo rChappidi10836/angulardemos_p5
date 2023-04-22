@@ -32,3 +32,6 @@ console.log(expo(2,3));
 console.log(expo(2,4));
 console.log(expo(2,5));
 console.log(expo(2));
+
+let x: unknown="find lenght";
+console.log("x lenght =" +(x as string).length);

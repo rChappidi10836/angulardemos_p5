@@ -25,3 +25,5 @@ console.log(expo(2, 3));
 console.log(expo(2, 4));
 console.log(expo(2, 5));
 console.log(expo(2));
+let x = "find lenght";
+console.log("x lenght =" + x.length);

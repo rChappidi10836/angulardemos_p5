@@ -1,0 +1,64 @@
+<!-- <p>Server with id {{serverId}} is {{serverStatus}}</p>
+<p>Current Status is {{getServerStatus()}}</p> -->
+
+<div class="container">
+    <div class="row">
+        <!-- <div class="col">
+            <label for="servername">Server Name</label>
+        </div> -->
+        <div class="col">
+            <!-- passing event data
+             -->
+            <input 
+                type="text" 
+                class="form-control" 
+                id="servername"
+                (input)="onUpdateServreName($event)"
+                placeholder="Server Name"
+            />
+        </div>
+        <!-- <div class="col">
+            <label for="serverdescripton">Server Description</label>
+        </div> --> 
+        <!-- 2-waybinding -->
+        <div class="col">
+            <input 
+                type="text" 
+                class="form-control" 
+                id="serverdescripton"
+                [(ngModel)]="serverDescripton"
+                placeholder="Server Description"
+            /> 
+        </div>
+        <div  class="col">
+            <!-- propertybinding -->
+            <button [ngClass]="getServerClass()" [disabled]="serverStatus=='offline'"> 
+                {{serverName}} {{serverId}}
+            </button>
+            <small class="form-text text-muted">{{serverDescripton}}</small>
+        </div>
+        <div class="col" *ngIf="serverStatus=='online'; else serverOffline">
+            <button 
+                class="btn btn-info btn-lg" 
+                [ngStyle] ="{backgroundColor: getServerColor() }">
+                CPU 50% Memory 40%
+            </button>
+        </div>
+        <ng-template #serverOffline>
+            <div class="col" >
+                <button 
+                    class="btn btn-info btn-lg" 
+                    [ngStyle] ="{backgroundColor: getServerColor() }">
+                    SERVER IS OFFLINE
+                </button>
+            </div>
+        </ng-template>
+        <div class="col">
+            <!-- eventbinding -->
+            <button class="btn btn-primary btn-sm" (click)="onPowerBtnClick()">
+                <!-- stringinterpolation -->
+                {{getPowerBtnlabel()}} 
+            </button>
+        </div>
+    </div>
+</div>
