@@ -1,0 +1,18 @@
+<br><hr>
+<p>Q{{index+1}}) {{set.que}}</p>
+
+<!-- <p *ngFor="let opt of set.options">{{opt}}</p> -->
+
+<div class="row">
+    <div class="form-group">
+        <div class="col">
+            <div class="radio" *ngFor = "let opt of set.options; let i =index">
+                <label>
+                    <input type="radio" name="{{set.id}}" [value]="opt" 
+                            [(ngModel)]="selectedOption"  (click)="selectedoption(set.id,opt)" required/>
+                    {{opt}}
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

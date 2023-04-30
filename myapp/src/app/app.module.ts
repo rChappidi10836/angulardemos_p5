@@ -13,10 +13,41 @@ import { ProductComponent } from './products/product/product.component';
 import { AddproductComponent } from './products/addproduct/addproduct.component';
 import { LifecycledemoComponent } from './lifecycledemo/lifecycledemo.component';
 import { BasicHighLightDirective } from './CustomDIrectives/BasicHIghlightDirective';
-import { BetterHighlightDirective } from './CustomDirectives/better-highlight.directive';
+import { BetterHighlightDirective } from './CustomDIrectives/better-highlight.directive';
 import { AccountsComponent } from './accounts/accounts.component';
 import { NewaccountComponent } from './accounts/newaccount/newaccount.component';
 import { AccountComponent } from './accounts/account/account.component';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { ObservablesdemoComponent } from './observablesdemo/observablesdemo.component';
+import { TformsComponent } from './tforms/tforms.component';
+import { RformsComponent } from './rforms/rforms.component';
+import { BlogpostsComponent } from './blogposts/blogposts.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BlogpostComponent } from './blogposts/blogpost/blogpost.component';
+import { QuizProjComponent } from './quiz-proj/quiz-proj.component';
+import { QuesetComponent } from './quiz-proj/queset/queset.component';
+import { ScoreComponent } from './quiz-proj/score/score.component';
+
+
+
+
+const appRoutes: Routes = [
+{path: '', component: HomeComponent},
+{path:'Products',component: ProductsComponent},
+{path:'Names',component: NamesComponent},
+{path:'Lifecycle',component: LifecycledemoComponent},
+{path:'SecretDis&Clickstamp',component: SecretdisplaywithlogComponent},
+{path: 'Server',component: ServerComponent}, 
+{path: 'warningalert',component: WarningAlertComponent},
+{path: 'Accounts',component: AccountsComponent},
+{path: 'Observables',component: ObservablesdemoComponent},
+{path: 'tforms',component: TformsComponent},
+{path: 'rforms',component: RformsComponent},
+{path: 'blogposts',component: BlogpostsComponent},
+{path: 'QuizProj',component: QuizProjComponent},
+
+];
 
 @NgModule({
   declarations: [
@@ -35,8 +66,18 @@ import { AccountComponent } from './accounts/account/account.component';
     AccountsComponent,
     NewaccountComponent,
     AccountComponent,
+    HomeComponent,
+    ObservablesdemoComponent,
+    TformsComponent,
+    RformsComponent,
+    BlogpostsComponent,
+    BlogpostComponent,
+    QuizProjComponent,
+    QuesetComponent,
+    ScoreComponent,
+   
   ],
-  imports: [BrowserModule,FormsModule,],
+  imports: [BrowserModule,FormsModule, RouterModule.forRoot(appRoutes), HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })

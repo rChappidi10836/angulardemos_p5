@@ -1,0 +1,10 @@
+<form><div class="container" *ngIf="disques; else Result">
+<p>WellCome to Quiz</p>
+Note: Choose one option for each question <br>
+<app-queset *ngFor="let que of List; let i = index" [set]="que" [index]="i"></app-queset>
+<button type="button" class="btn btn-primary" (click)="scorecal()">submit</button>
+
+</div></form>
+<ng-template #Result>
+    <app-score></app-score>
+</ng-template>

@@ -1,4 +1,4 @@
-<h1>FIrst angular html</h1>
+<!-- <h1>FIrst angular html</h1> -->
 
 <!-- <app-products></app-products>
 <app-products></app-products>
@@ -18,5 +18,65 @@
 
 <!-- <app-lifecycledemo></app-lifecycledemo> -->
 
-<app-accounts></app-accounts>
+<!-- <app-accounts></app-accounts> -->
 
+<div class="container mt-2">
+    <div class="row">
+        <div class="col p-2">
+            <ul class="nav nav-tabs p-2">
+                <li 
+                    role="presentation" 
+                    class="nav-item" 
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact: true}"
+                >
+                    <a class="nav-link" routerLink="/">Home</a>
+                </li>
+                <li role="presentation" class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="QuizProj">Quiz</a>
+                </li>
+                <!-- <li role="presentation" class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="Server">Server</a>
+                </li>
+                <li role="presentation" class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="warningalert">Warning-Alert</a>
+                </li>
+                <li role="presentation" class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="Accounts">Accounts</a>
+                </li>
+                <li role="presentation" class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="Products">Products</a>
+                </li>
+                <li role="presentation" class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="SecretDis&Clickstamp">SecretDis&Clickstamp</a>
+                </li>
+                <li role="presentation" class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="Observables">Observables</a>
+                </li>
+                <li role="presentation" class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="tforms">TForms</a>
+                </li>
+                <li role="presentation" class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="rforms">RForms</a>
+                </li>
+                <li role="presentation" class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="blogposts">BlobPosts</a>
+                </li>
+                <li role="presentation" class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="Names">Names</a>
+                </li>
+                <li role="presentation" class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="Lifecycle">Lifecycle</a>
+                </li> -->
+                
+                
+                
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

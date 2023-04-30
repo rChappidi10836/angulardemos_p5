@@ -1,0 +1,55 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "first_name": "kinro",
+      "last_name": "guard",
+      "email": "kguard@em.com"
+    },
+    {
+      "id": 2,
+      "first_name": "Ginro",
+      "last_name": "guard",
+      "email": "gguard@em.com"
+    },
+    {
+      "first_name": "Magma",
+      "last_name": "gorilla",
+      "email": "mgoril@em.com",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "first_name": "chrome",
+      "last_name": "expro",
+      "email": "cexpro@em.com"
+    },
+    {
+      "id": 5,
+      "first_name": "gen",
+      "last_name": "magin",
+      "email": "gmagin@em.com"
+    },
+    {
+      "id": 6,
+      "first_name": "helo"
+    },
+    {
+      "first_name": "helo",
+      "last_name": "greet",
+      "email": "hgreet@em.com",
+      "id": 8
+    }
+  ],
+  "posts": [
+    {
+      "title": "Java",
+      "content": "Java is the best multipurpose lang",
+      "id": 1
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

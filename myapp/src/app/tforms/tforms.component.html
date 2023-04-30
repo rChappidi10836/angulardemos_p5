@@ -1,0 +1,73 @@
+<div class="container m-25">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">  <!-- here f is form variable -->
+    <div class="row">
+        <div class="form-group">
+            <div class="col">
+                <label for="username">Username</label>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="username" 
+                placeholder="Username" ngModel name="username" required #username="ngModel"/>
+                <span class="small" *ngIf="!username.valid && username.touched">
+                   * please enter a valid username
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <div class="col">
+                <label for="email">E-Mail</label>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="email" 
+                placeholder="E-Mail" ngModel name="email" required email #email="ngModel"/>
+                <span class="small" *ngIf="!email.valid && email.touched">
+                    * please enter a valid E-Mail
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <div class="col">
+                <label for="secque">Secret Question</label>
+            </div>
+            <div class="col">
+                <select name="secque" id="secque" class="form-control" [(ngModel)]="sel">
+                    <option [ngValue]="null" disabled selected hidden>--Select Question--</option>
+                    <option value="pet">your first pet</option>
+                    <option value="car">your dream car</option>
+                    <option value="place">your bucket place</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <div class="col">
+                <label for="gender">Gender</label>
+                <div class="radio" *ngFor = "let gender of genders">
+                    <label>
+                        <input type="radio" name="gender" [value]="gender" ngModel required/>
+                        {{gender}}
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <button class="btn btn-primary m-2" [disabled]="!f.valid">SUBMIT</button>
+    </form>
+
+    <div class="row" *ngIf="submitted">
+        <div class="col">
+            <h3>Entered Data</h3>
+            <p>UserName: {{user.username}}</p>
+            <p>E-Mail: {{user.email}}</p>
+            <p>Secret: {{user.secret}}</p>
+            <p>Gender: {{user.gender}}</p>
+            
+        </div>
+    </div>
+</div>

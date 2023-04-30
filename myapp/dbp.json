@@ -1,0 +1,41 @@
+{
+  "quedata": [
+    {
+      "id": 1,
+      "que": "What is constant ?",
+      "options": [
+        "which will not change",
+        "change"
+      ],
+      "selected": "",
+      "ans": "change"
+    },
+    {
+      "id": 2,
+      "que": "What is Reality ?",
+      "options": [
+        "which is around and in us and what we exprience",
+        "Yet to Know"
+      ],
+      "selected": "",
+      "ans": "Yet to Know"
+    },
+    {
+      "id": 3,
+      "que": "Who is Lenardo ?",
+      "options": [
+        "Actor",
+        "All of the Below",
+        "Mathematician",
+        "Painter",
+        "Artist",
+        "Poet",
+        "Scientist",
+        "Doctor",
+        "Engineer"
+      ],
+      "selected": "",
+      "ans": "All of the Below"
+    }
+  ]
+}

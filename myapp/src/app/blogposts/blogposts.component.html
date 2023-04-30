@@ -1,0 +1,41 @@
+<div class="container m-4" style="width: 40%;">
+    <div class="row">
+        <div class="col">
+            <form #f="ngForm">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="'title" name="title" ngModel required/>
+                </div>
+                <div class="form-group">
+                    <label for="content">Content</label>
+                    <textarea type="text" 
+                        class="form-control" id="content" 
+                        cols="50" rows="10"
+                        name="content" ngModel required></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit" 
+                        [disabled]="!f.valid" (click)="onCreatePost(f.value,f)">
+                        Send Post
+                </button>
+                <button class="btn btn-warning mx-2" (click)="onFetchPosts()">
+                    Fetch Posts
+                </button>
+                <button class="btn btn-danger mx-1" (click)="onDeletePosts()">
+                    Delete Posts
+                </button>
+            </form>z
+            <div class="row m-3">
+                <div class="col">
+                    <p *ngIf="dbPosts.length < 1 && !isFetching">No Post Available</p>
+                    <ul class="list-group" *ngIf="dbPosts.length >=1 && !isFetching">
+                        <app-blogpost
+                            *ngFor="let post of dbPosts"
+                            [post]="post"
+                            ></app-blogpost>
+                    </ul>
+                    <p *ngIf="isFetching">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
