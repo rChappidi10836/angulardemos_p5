@@ -1,0 +1,50 @@
+
+<li class="list-group-item d-inline-block mr-10 mb-2" >
+    
+    <div class="container1" *ngIf="udvar.toString()!=post.id; else edit">
+
+        <!-- udvar{{udvar}}postid{{ post.id}} -->
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.content }}</p>
+        <span><button class="btn btn-danger btn-sm" (click)="onPostDelete()">
+            Delete </button>
+        </span>
+        
+        <span><button class="btn btn-warning btn-sm m-4 Update"  
+                (click)="onUpdateStatus(post.id); disableOtherUpdateButtons();" 
+                
+                >
+            Update </button>
+        </span>
+
+        
+    </div>
+    <ng-template #edit>
+        <p>Do Require Changes in blog and Submit to Update</p>
+        <form #f="ngForm">
+            <div class="col">
+                <label class="m-3">Title</label>
+                <div class="form-group col">
+                    <input type="text"  name="title" id="title" [(ngModel)]="post.title" ngModel required/>
+                </div>
+                <label class="m-3">Content</label>
+                <div class="form-group col">
+                    <textarea type="text" 
+                        cols="40" rows="10"
+                        name="content"
+                        [(ngModel)]="post.content" id="content" ngModel required></textarea>
+                </div>
+                <input class="col" type="text" name="id" id="id"  [(ngModel)]="post.id" ngModel hidden>
+                <button class="btn btn-primary btn-sm m-2" type="button"
+                        (click)="onPostUpdate(f.value)">
+                    Submit
+                </button>
+                
+                    <button class="btn btn-danger cust-btn m-4 btn-sm" 
+                             (click)="onFetch()">
+                            CANCEL ❌
+                    </button>
+            </div>
+        </form>  
+    </ng-template>
+</li>

@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { PostData } from '../postdata.model';
 import { BlogpostsservicesService } from 'src/app/services/blogpostservice.service';

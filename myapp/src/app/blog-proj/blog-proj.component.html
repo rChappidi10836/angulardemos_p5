@@ -1,0 +1,54 @@
+<div class="container m-4" style="width: auto;">
+            <div class="container1" *ngIf="tosend">
+                <form #f="ngForm">
+                    <div class="col">
+                        <div class="form-group col">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" id="'title" name="title" ngModel required/>
+                        </div>
+                        <div class="form-group col">
+                            <label for="content">Content</label>
+                            <textarea type="text" 
+                                class="form-control" id="content" 
+                                cols="50" rows="10"
+                                name="content" ngModel required></textarea>
+                        </div>
+                            <button class="btn btn-primary cust-btn m-4 btn-sm"  type="submit" 
+                                    [disabled]="!f.valid" (click)="onCreatePost(f.value,f)">
+                                    Send Post
+                            </button>
+                            <div class="cancel">
+                            <button class="btn btn-danger cust-btn m-4 btn-sm" 
+                                     (click)="changeState()">
+                                    CANCEL ❌
+                            </button></div>
+                    </div> 
+                    
+                </form>
+            </div>
+            <div class="container1" *ngIf="!tosend">
+                <div class="refap">
+                    <button class="btn shadow col cust-btn m-4 refresh " (click)="onFetchPosts()" >
+                                    🔄 Refresh
+                    </button>
+                    <button class="btn btn-warning shadow col cust-btn m-3" 
+                                        (click)="changeState()">
+                                        ADD POST ➕
+                    </button>
+                </div>
+                <div class="row m-3 width-3">
+                    
+                        <p *ngIf="dbPosts.length < 1 && !isFetching">No Posts Available</p>
+                        <ul class="list-group d-flex fd-row fw-wrap " *ngIf="dbPosts.length >=1 && !isFetching">
+                            <app-blog
+                                *ngFor="let post of dbPosts"
+                                [post]="post"
+                                ></app-blog>
+                        </ul>
+                        <p *ngIf="isFetching">Loading...</p>
+                </div>
+                <!-- <button class="btn btn-danger col cust-btn m-4" (click)="onDeletePosts()" hidden>
+                    Delete All Posts
+                </button> -->
+            </div>
+</div>

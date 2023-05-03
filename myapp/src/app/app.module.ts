@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
@@ -28,6 +27,8 @@ import { BlogpostComponent } from './blogposts/blogpost/blogpost.component';
 import { QuizProjComponent } from './quiz-proj/quiz-proj.component';
 import { QuesetComponent } from './quiz-proj/queset/queset.component';
 import { ScoreComponent } from './quiz-proj/score/score.component';
+import { BlogProjComponent } from './blog-proj/blog-proj.component';
+import { BlogComponent } from './blog-proj/blog/blog.component';
 
 
 
@@ -46,6 +47,7 @@ const appRoutes: Routes = [
 {path: 'rforms',component: RformsComponent},
 {path: 'blogposts',component: BlogpostsComponent},
 {path: 'QuizProj',component: QuizProjComponent},
+{path: 'BlogProj',component: BlogProjComponent},
 
 ];
 
@@ -75,6 +77,8 @@ const appRoutes: Routes = [
     QuizProjComponent,
     QuesetComponent,
     ScoreComponent,
+    BlogProjComponent,
+    BlogComponent,
    
   ],
   imports: [BrowserModule,FormsModule, RouterModule.forRoot(appRoutes), HttpClientModule],
