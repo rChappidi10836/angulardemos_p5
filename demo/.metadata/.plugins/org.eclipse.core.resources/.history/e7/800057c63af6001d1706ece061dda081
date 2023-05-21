@@ -1,0 +1,102 @@
+package com.example.Sample.demo.entity;
+
+import javax.persistence.*;
+
+@Entity
+
+public class meds {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "mrp")
+    private double mrp;
+
+    @Column(name = "sp")
+    private double sp;
+
+    @Column(name = "discount")
+    private int discount;
+
+    @Column(name = "avail")
+    private boolean avail;
+
+    @Column(name = "images")
+    private String images;
+
+    
+    
+    
+	public Meds(int id, String name, double mrp, double sp, int discount, boolean avail, String images) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.mrp = mrp;
+		this.sp = sp;
+		this.discount = discount;
+		this.avail = avail;
+		this.images = images;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getMrp() {
+		return mrp;
+	}
+
+	public void setMrp(double mrp) {
+		this.mrp = mrp;
+	}
+
+	public double getSp() {
+		return sp;
+	}
+
+	public void setSp(double sp) {
+		this.sp = sp;
+	}
+
+	public int getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(int discount) {
+		this.discount = discount;
+	}
+
+	public boolean isAvail() {
+		return avail;
+	}
+
+	public void setAvail(boolean avail) {
+		this.avail = avail;
+	}
+
+	public String getImages() {
+		return images;
+	}
+
+	public void setImages(String images) {
+		this.images = images;
+	}
+
+    // getters and setters
+    
+}

@@ -1,0 +1,18 @@
+package com.example.Sample.demo.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
+
+@Controller
+public class Displaydemo {
+	
+	
+	@GetMapping("/display")
+	@ResponseBody
+	public String dis() {
+		return "success";
+	}
+	
+	
+}

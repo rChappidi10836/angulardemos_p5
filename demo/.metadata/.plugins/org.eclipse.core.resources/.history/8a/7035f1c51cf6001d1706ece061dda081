@@ -1,0 +1,33 @@
+package com.example.Sample.demo.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.example.Sample.demo.entity.Meds;
+import com.example.Sample.demo.repository.MedsRepository;
+
+import org.springframework.web.bind.annotation.*;
+
+@Controller
+public class Displaydemo {
+	
+	@Autowired
+	MedsRepository mr;
+	
+	@GetMapping("/display")
+	@ResponseBody
+	public String dis() {
+		return "success";
+	}
+	
+	@GetMapping("/meds")
+	public Iterable meds() {
+		Iterable<Meds> meds = mr.findAll();
+		
+		return meds;
+		
+	}
+	
+	
+}

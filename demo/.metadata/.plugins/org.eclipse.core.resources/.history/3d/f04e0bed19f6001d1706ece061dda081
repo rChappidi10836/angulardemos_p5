@@ -1,0 +1,31 @@
+package com.example.Sample.demo.entity;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "meds")
+public class Meds {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "mrp")
+    private BigDecimal mrp;
+
+    @Column(name = "sp")
+    private BigDecimal sp;
+
+    @Column(name = "discount")
+    private int discount;
+
+    @Column(name = "avail")
+    private boolean avail;
+
+    @Column(name = "images")
+    private String images;
+
+    // getters and setters
+}

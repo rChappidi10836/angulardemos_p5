@@ -1,0 +1,17 @@
+package com.example.Sample.demo.entity;
+
+import jakarta.persistence.*;
+
+@Entity
+public class users {
+	
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	int id;
+	String name;
+	String pwd;
+	String phone;
+	
+	
+}
