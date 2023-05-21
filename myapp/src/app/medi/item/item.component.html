@@ -1,0 +1,16 @@
+
+<div class="products-box">
+    
+    <div class="product-img">
+        <img [src]="med.images">
+    </div>
+    <div class="product-details">
+        <h3 class="name">{{med.name}}</h3>
+        <p class="mrp" style="text-decoration: line-through;">MRP {{med.mrp}}</p>
+        <p class="price">SELL PRICE {{med.sp}} Bucks</p>
+        <p class="discount">Discount {{med.discount}}%</p>
+       
+        <button class="btn btn-primary" type="button" (click)="addtocart(med)">ADD TO CART</button>
+    </div>
+</div>
+  

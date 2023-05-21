@@ -1,0 +1,29 @@
+.products-box{
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+}
+
+ .product-img{
+    float: left;
+    width: 50%;
+    padding-right: 10px;
+}
+.product-img img{
+    margin: 20px;
+    max-width: 100%;
+    max-height: 210px;
+    object-fit:fill;
+    border-radius: 5px;
+    
+}
+
+.product-details{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}

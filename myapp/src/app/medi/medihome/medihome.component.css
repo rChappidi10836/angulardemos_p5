@@ -1,0 +1,29 @@
+.nav-box{
+    background-color: skyblue;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-box a,
+.nav-box button{
+    color: whitesmoke;
+    font-weight: bold;
+    margin-right: 20px;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba( 0, 0, 0, 0.2);
+    transition: tranform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.nav-box a:hover,
+.nav-box button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba( 0, 0, 0, 0.2);
+}
+.nav-box button{
+    margin-left: auto;
+    background: skyblue;
+    border-color: transparent;
+}
+
+

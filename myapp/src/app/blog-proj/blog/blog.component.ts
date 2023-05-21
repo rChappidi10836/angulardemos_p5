@@ -30,7 +30,6 @@ export class BlogComponent implements OnInit {
       });
   }
   
-
   onFetch(){
     this.blockproj.FetchPosts();
   }
@@ -45,7 +44,6 @@ export class BlogComponent implements OnInit {
     this.bps.updatepost(postdata,postdata.id);//updation
     this.blockproj.FetchPosts();
   }
-
 
   disableOtherUpdateButtons() {
     // disable all Update buttons except the current one being updated

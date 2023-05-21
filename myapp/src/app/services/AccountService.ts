@@ -15,7 +15,6 @@ export class AccountService{
 
     accountDelete(id: number){
        this.accounts.splice(id,1);
-        
     }
 
 

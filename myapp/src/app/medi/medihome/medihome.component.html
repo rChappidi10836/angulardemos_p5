@@ -1,0 +1,18 @@
+<div class="home" *ngIf="home">
+    <div class="nav-box">
+        <a href="localhost:4200">MEDI-CARE.com</a>
+        
+       
+    </div>
+</div>
+
+<div class="container" *ngIf="home">
+    <div class="vertical-center">
+        <button class="btn btn-outline-info btn-lg m-3" (click)="onbuypage()" style="size:18px;">SHOP PORTAL</button>
+        <button class="btn btn-outline-info btn-lg m-3" (click)="onadminpage()">ADMIN PORTAL</button>
+    </div>
+</div>
+
+
+<app-medi *ngIf="buypage"></app-medi>
+<app-admin *ngIf="adminpage"></app-admin>

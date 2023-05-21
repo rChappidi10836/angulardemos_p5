@@ -1,0 +1,83 @@
+<div class="main">
+    <nav class="navbar">
+        <div class="topnav-centered">
+            <h1 class="active">
+                ADMIN PORTAL
+            </h1>
+        </div>
+    </nav>
+</div>
+
+<div class="center" *ngIf="!update && !addform" style="width: 400px">
+    <button class="btn btn-warning" (click)="onaddform()"> ➕ADD ITEM</button>
+    <button class="btn btn-primary btn-round" (click)="back()">BACK</button>
+</div>
+
+<div class="row m-4" *ngIf="display && !addform && !update" style="display: flex; ">
+    <br>
+    <div class="column" *ngFor="let x of meds">
+        <div class="card">
+           
+            <img src="{{x.images}}" style="height: 200px; width: 200px;" alt="{{x.name}}"> 
+            <p><b>{{x.name}}</b></p>
+            <b>Price :</b>{{x.sp}}
+        </div>
+        <p *ngIf="x.avail=='true'; else s">
+            Status: Available
+            <button class="btn btn-warning" (click)="changemedstatus(x.id)">Out of Stock</button>
+        </p>
+        <ng-template #s>
+            Status: Out of Stock
+            <button class="btn btn-warning" (click)="changemedstatus(x.id)">Available</button>
+        </ng-template>
+        <button class="btn btn-primary btn-round" (click)="edit(x)">
+            Edit
+        </button>
+        <button class="btn btn-danger btn-round" (click)="remove(x.id)">
+            Remove
+        </button>
+    </div>
+</div>
+
+<div class="center" *ngIf="addform" style="width: 400px">
+    <div class="card">
+        <form #f="ngForm">
+            <div class="row">
+                <div class="col">
+                    <div class="form-outline">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" name="name" id="name" ngModel required>
+                    </div>
+                </div>
+            </div>    
+            <div class="row">
+                <div class="form-outline">
+                    <label for="mrp" class="form-label">MRP</label>
+                    <input type="text" name="mrp" id="mrp" ngModel required>
+                </div>
+                <div class="col">
+                    <label for="sp" class="form-label">SP</label>
+                    <input type="text" name="sp" id="sp" ngModel required>
+                </div>
+                <div class="col">
+                    <label for="dc" class="form-label">Discount</label>
+                    <input type="text" name="discount" id="dc" ngModel required>
+                </div>
+                <div class="col">
+                    <label for="avail" class="form-label">Status</label>
+                    <input type="text" name="avail" id="avail" ngModel required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-outline">
+                    <label for="img" class="form-label">IMAGE</label>
+                    <input type="text" name="images" id="img" ngModel required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block mb-4"
+            [disable]="!f.valid"
+            (click)="add(f.value)">ADD</button>
+        </form>
+    </div>
+</div>

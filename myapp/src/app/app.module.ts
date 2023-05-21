@@ -29,12 +29,20 @@ import { QuesetComponent } from './quiz-proj/queset/queset.component';
 import { ScoreComponent } from './quiz-proj/score/score.component';
 import { BlogProjComponent } from './blog-proj/blog-proj.component';
 import { BlogComponent } from './blog-proj/blog/blog.component';
-
-
-
+import { KitchenstoryComponent } from './kitchenstory/kitchenstory.component';
+import { ProductitemComponent } from './kitchenstory/productitem/productitem.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { MediComponent } from './medi/medi.component';
+import { ItemComponent } from './medi/item/item.component';
+import { MedihomeComponent } from './medi/medihome/medihome.component';
+import { CartComponent } from './medi/cart/cart.component';
+import { PayComponent } from './medi/pay/pay.component';
+import { SuccessComponent } from './medi/success/success.component';
+import { AdminComponent } from './medi/admin/admin.component';
+import { AdminportalComponent } from './medi/admin/adminportal/adminportal.component';
 
 const appRoutes: Routes = [
-{path: '', component: HomeComponent},
+{path: 'home', component: HomeComponent},
 {path:'Products',component: ProductsComponent},
 {path:'Names',component: NamesComponent},
 {path:'Lifecycle',component: LifecycledemoComponent},
@@ -48,7 +56,8 @@ const appRoutes: Routes = [
 {path: 'blogposts',component: BlogpostsComponent},
 {path: 'QuizProj',component: QuizProjComponent},
 {path: 'BlogProj',component: BlogProjComponent},
-
+{path: '',component: KitchenstoryComponent},
+{path: 'ng2', component: Ng2SearchPipeModule}
 ];
 
 @NgModule({
@@ -79,9 +88,19 @@ const appRoutes: Routes = [
     ScoreComponent,
     BlogProjComponent,
     BlogComponent,
-   
+    KitchenstoryComponent,
+    ProductitemComponent,
+    MediComponent,
+    ItemComponent,
+    MedihomeComponent,
+    CartComponent,
+    PayComponent,
+    SuccessComponent,
+    AdminComponent,
+    AdminportalComponent,
+ 
   ],
-  imports: [BrowserModule,FormsModule, RouterModule.forRoot(appRoutes), HttpClientModule],
+  imports: [BrowserModule,FormsModule, RouterModule.forRoot(appRoutes), HttpClientModule, Ng2SearchPipeModule],
   providers: [],
   bootstrap: [AppComponent]
 })

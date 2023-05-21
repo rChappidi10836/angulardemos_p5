@@ -1,0 +1,105 @@
+
+<!-- NAV-BAR -->
+<div class="nav-box">
+    <a href="localhost:4200">MEDI-CARE.com</a>
+    
+    <div class="pack" *ngIf="!login">
+        <button class="cart" (click)="oncart()">🛒CART</button>
+        <a href="#" (click)="logOut()" >LOGOUT</a>
+    </div>
+</div>
+
+<app-cart *ngIf="cartvar"></app-cart>
+
+<!-- products - page -->
+<div class="container" *ngIf="!login && !payment && !takedetailsvar && !cartvar">
+    <div class="search">
+    <input type="text" name="searchText" class="search"
+        placeholder="Search by Medicine Name/ category/ company"
+        [(ngModel)]="searchText">
+    </div>    
+    <div class="col content">
+        <app-item *ngFor="let med of meds | filter:searchText" [med]="med"> </app-item>
+    </div>
+</div>
+
+
+<!-- LOGIN -->
+<section class="vh-100" *ngIf="login">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card shoadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body text-center">
+                        <h3>USER LOGIN</h3>
+                        <h3 *ngIf="invalid">
+                            <text style="color: red">Invalid Inputs</text>
+                        </h3>
+                        <h3 *ngIf="invalid">
+                            <text style="color: green">Didn't Register Before? <br>Register Now</text>
+                        </h3>
+                        <h3 *ngIf="logout">
+                            <text style="color: aqua">LOGGED OUT</text>
+                        </h3>
+                        <form #f="ngForm">
+                            <div class="form-outline mb-4">
+                                <label for="typeNamex-2">Phone Number</label>
+                                <input name="phone" type="phone" id="typePhonex-2"
+                                class="form-control form0control-lg" ngModel required/>
+                                
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label for="typePwdx-2">Password</label>
+                                <input name="pwd" type="password" id="typePwdx-2"
+                                class="form-control form0control-lg" ngModel required/>
+                               
+                            </div>
+                            <button class="btn btn-primary btn-lg btn-block" type="submit"
+                            [disabled]="!f.valid"
+                            (click)="onchecklogin(f.value)">LOGIN</button>
+                            <br>
+                            <p>
+                                Don't have account?
+                                <button class="btn btn-primary btn-sm" (click)="onregister()">Register Now</button>
+                            </p>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container my-5 py-5" *ngIf="takedetailsvar">
+    <div class="row d-flex justify-content-center py-5">
+        <div class="col-md-7">
+            <div class="card">
+                <div class="card-body p-4">
+                    <form #f="ngForm">
+                        <div class="row mb-4">
+                            <div class="col">
+                                <div class="form-outline">
+                                    <label class="form-label" for="rename">Name</label>
+                                    <input type="text" name="name" class="form-control" id="rename" size="8" ngModel required/>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-outline">
+                                    <label class="form-label" for="repwd">Password</label>
+                                    <input type="text" name="pwd" class="form-control" id="repwd" ngModel required/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-outline">
+                            <label class="form-label" for="rephone">Phone Number</label>
+                            <input type="text" name="phone" class="form-control" id="rephone" ngModel required/>
+                        </div><br>
+                        <button type="submit" class="btn btn-primary btn-block mb-4"
+                        (click)="registeruser(f.value)" [disabled]="!f.valid">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

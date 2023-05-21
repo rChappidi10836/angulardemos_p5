@@ -1,0 +1,89 @@
+
+<div [ngSwitch]="condition">
+
+    <!-- home -->
+    <div *ngSwitchCase="1">
+        <div class="container">
+            <div class="search">
+            <input type="text" name="searchText" class="search"
+                placeholder="Search by item Name/ category/ company"
+                [(ngModel)]="searchText">
+            </div>    
+            <div class="col content">
+                <app-productitem *ngFor="let item of items | filter:searchText" [item]="item"></app-productitem>
+            </div>
+        </div>
+    </div>
+
+    <!-- pay gate -->
+    <div *ngSwitchCase="2">
+        <div class="row">
+            <div class="col">
+                <h2>The Selected Product to Buy</h2>
+                <br>
+                <div class="products-box">
+                    <div class="product-img">
+                        
+                        <img [src]="item.img" alt="{{item.name}}">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="name">{{item.name}}</h3>
+                        <pre>     PRICE   : {{item.price}} Bucks<br>QUANTITY : {{item.quantity}}</pre>
+                    </div>
+                </div><br>
+                <button class="btn btn-danger" type="menu" (click)="home()">❌CANCEL</button>
+            </div>
+            <div class="col form-group" style="margin-top: 5%;">
+                <h1> Enter Details </h1>
+                <form #f="ngForm">
+                    <p>
+                        Name:    <input type="text"  name="name" id="name" ngModel required /><br><br>
+                        Phno:    <input type="tel" name="phno" id="phno" ngModel required ><br><br>
+                        Address: <input type="text" name="address" id="address" ngModel required ><br><br>
+                        UPI ID : <input type="text" name="uid" id="uid" ngModel required placeholder="okbankname@phno" >
+                        <input type="text" name="pid" id="pid" [(ngModel)]="item.id" ngModel hidden>
+                    </p>
+                    <button class="btn btn-primary" type="submit" (click)="addorder(f.value)">
+                            BUY
+                    </button>
+                </form>
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- confirmation page -->
+    <div *ngSwitchCase="3">
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                margin: 0;
+            }
+            
+            img {
+                width: 200px;
+                height: 200px;
+                margin-bottom: 20px;
+            }
+            
+            p {
+                font-size: 24px;
+                font-weight: bold;
+                text-align: center;
+            }
+        </style>
+
+        <body>
+            <img src="https://edulinksolutions.com/wp-content/uploads/2017/06/Comply_Brand_Symbol_Green_200px.png" alt="SUCCESS">
+            <P>ORDER CONFIRMEND</P>
+            <a href=""><button type="menu" class="btn btn-link" (click)="home()">KEEP SHOPPING</button></a>
+        </body>
+       
+        
+    </div>
+
+</div>

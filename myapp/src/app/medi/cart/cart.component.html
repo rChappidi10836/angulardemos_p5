@@ -1,0 +1,44 @@
+<h3 *ngIf="!payment" style="left: 50%; display: block;">CART</h3>
+    <table *ngIf="!payment" style="width: 80rem;">
+        <tr>
+            <th>
+                <h1 style="color: blue">Name</h1>
+            </th>
+            <th>
+                <h1 style="color: blue">Price</h1>
+            </th>
+            <th>
+                <h1 style="color: blue">Add</h1>
+            </th>
+            <th>
+                <h1 style="color: blue">Delete</h1>
+            </th>
+        </tr>
+        <tr *ngFor="let single of temp,let i=index">
+            <td *ngIf="single">
+                <h1>{{single.name}}</h1>
+            </td>
+            <td *ngIf="single">
+                <h1>{{single.sp}}</h1>
+            </td>
+            <td *ngIf="single">
+                <button class="btn btn-outline-success m-2" (click)="addone(single)"> ADD</button>
+            </td>
+            <td *ngIf="single">
+                <button class="btn btn-outline-success m-2" (click)="delete(i)"> REMOVE</button>
+            </td>
+            
+        </tr>
+    </table>
+
+    
+
+    <div *ngIf="!payment">
+        <h3>Total amount : {{totalamount}}</h3>
+        <button class="btn btn-warning btn-lg mx-5" (click)="onpayment()">
+            Checkout
+        </button>
+    </div>
+
+
+    <app-pay *ngIf="payment"></app-pay>

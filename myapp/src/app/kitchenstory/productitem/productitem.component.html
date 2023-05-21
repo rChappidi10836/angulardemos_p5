@@ -1,0 +1,24 @@
+<!-- <br>
+{{item.name}} ||
+{{item.category}} ||
+{{item.brand}} ||
+{{item.price}} ||
+{{item.quantity}} ||
+<br> -->
+
+<div class="products-box">
+    
+    <div class="product-img">
+        <img [src]="item.img" alt="{{item.name}}">
+    </div>
+    <div class="product-details">
+        <h3 class="name">{{item.name}}</h3>
+        <p class="category">{{item.category}}</p>
+        <p class="brand">{{item.brand}}</p>
+        <p class="price">{{item.price}} Bucks</p>
+        <p class="quantity">{{item.quantity}}</p>
+       
+        <button class="btn btn-primary" type="button" (click)="buy(item.id)">SELECT</button>
+    </div>
+</div>
+  

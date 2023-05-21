@@ -1,0 +1,399 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Amul Ghee",
+      "brand": "Amul Cooperative Society",
+      "category": "Dairy",
+      "price": 550,
+      "quantity": "1 Ltr",
+      "img": "assets/imgs/amul ghee.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Amul Cheese",
+      "brand": "Amul Cooperative Society",
+      "category": "Dairy",
+      "price": 350,
+      "quantity": "350g",
+      "img": "assets/imgs/amul cheese.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "Ashirwad Ghee",
+      "brand": "ITC Ltd.",
+      "category": "Dairy",
+      "price": 560,
+      "quantity": "1 Ltr",
+      "img": "assets/imgs/ashirwad ghee.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Everyday Ghee",
+      "brand": "Nestle India Ltd.",
+      "category": "Dairy",
+      "price": 450,
+      "quantity": "1 Ltr",
+      "img": "assets/imgs/everyday ghee.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Goverdhan Ghee",
+      "brand": "Goverdhan Ghee Ltd.",
+      "category": "Dairy",
+      "price": 600,
+      "quantity": "1 Ltr",
+      "img": "assets/imgs/go vardhan ghee.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Mother Dairy Ghee",
+      "brand": "Mother Dairy Ltd.",
+      "category": "Dairy",
+      "price": 545,
+      "quantity": "1 Ltr",
+      "img": "assets/imgs/mother dairy ghee.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Patanjali Cow Ghee",
+      "brand": "Patanjali Ltd.",
+      "category": "Dairy",
+      "price": 565,
+      "quantity": "1 Ltr",
+      "img": "assets/imgs/patanjali Cow Ghee.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Tender Coconut (1 pc)",
+      "brand": "Reliance fresh",
+      "category": "Fruits & Vegetables",
+      "price": 45,
+      "quantity": "900g",
+      "img": "assets/imgs/tender coconut.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Apple Indian",
+      "brand": "Reliance fresh",
+      "category": "Fruits & Vegetables",
+      "price": 139,
+      "quantity": "6 Pc",
+      "img": "assets/imgs/apple indian.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Apple Royal Gala",
+      "brand": "Reliance fresh",
+      "category": "Fruits & Vegetables",
+      "price": 159,
+      "quantity": "4 Pc",
+      "img": "assets/imgs/apple royal gala.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Apple Red Delicious",
+      "brand": "Reliance fresh",
+      "category": "Fruits & Vegetables",
+      "price": 189,
+      "quantity": "4 Pc",
+      "img": "assets/imgs/apple royal gala.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Banana Robusta",
+      "brand": "Reliance fresh",
+      "category": "Fruits & Vegetables",
+      "price": 45,
+      "quantity": "6 Pc",
+      "img": "assets/imgs/banana robusta.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Banana Yellaki",
+      "brand": "Reliance fresh",
+      "category": "Fruits & Vegetables",
+      "price": 95,
+      "quantity": "12 Pc",
+      "img": "assets/imgs/yellaki banana.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Banana Nendran",
+      "brand": "Reliance fresh",
+      "category": "Fruits & Vegetables",
+      "price": 120,
+      "quantity": "4 Pc",
+      "img": "assets/imgs/banana -nendran.png"
+    },
+    {
+      "id": 15,
+      "name": "Banana Red",
+      "brand": "Reliance fresh",
+      "category": "Fruits & Vegetables",
+      "price": 129,
+      "quantity": "4 Pc",
+      "img": "assets/imgs/red-banana.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Onion",
+      "brand": "Reliance fresh",
+      "category": "Fruits & Vegetables",
+      "price": 29,
+      "quantity": "1 Kg",
+      "img": "assets/imgs/onion.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Potato per kg",
+      "brand": "Reliance fresh",
+      "category": "Fruits & Vegetables",
+      "price": 32,
+      "quantity": "1 Kg",
+      "img": "assets/imgs/po tattoo.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Onion Pack",
+      "brand": "Reliance fresh",
+      "category": "Fruits & Vegetables",
+      "price": 140,
+      "quantity": "5 Kg",
+      "img": "assets/imgs/onion pack.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Potato Low Sugar",
+      "brand": "Reliance fresh",
+      "category": "Fruits & Vegetables",
+      "price": 88,
+      "quantity": "2 Kg",
+      "img": "assets/imgs/potato-low-sugar.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Sweet Potato",
+      "brand": "Reliance fresh",
+      "category": "Fruits & Vegetables",
+      "price": 29,
+      "quantity": "500g",
+      "img": "assets/imgs/sweet potato.jpg"
+    },
+    {
+      "id": 21,
+      "name": "Toned Milk",
+      "brand": "Mother Dairy Ltd.",
+      "category": "Dairy",
+      "price": 26,
+      "quantity": "500 ml",
+      "img": "assets/imgs/mother-dairy-toned-milk.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Full Cream Milk",
+      "brand": "Mother Dairy Ltd.",
+      "category": "Dairy",
+      "price": 32,
+      "quantity": "500 ml",
+      "img": "assets/imgs/mother-dairy-full-cream-milk.jpg"
+    },
+    {
+      "id": 23,
+      "name": "Taaza Toned Milk",
+      "brand": "Amul Cooperative Society",
+      "category": "Dairy",
+      "price": 26,
+      "quantity": "500 ml",
+      "img": "assets/imgs/amul taaza toned milk.jpg"
+    },
+    {
+      "id": 24,
+      "name": "Taaza Full Cream Milk",
+      "brand": "Amul Cooperative Society",
+      "category": "Dairy",
+      "price": 32,
+      "quantity": "500 ml",
+      "img": "assets/imgs/amul taaza full cream milk.jpg"
+    },
+    {
+      "id": 25,
+      "name": "Moti Toned Milk",
+      "brand": "Amul Cooperative Society",
+      "category": "Dairy",
+      "price": 30,
+      "quantity": "500 ml",
+      "img": "assets/imgs/amul moti milk.jpg"
+    },
+    {
+      "id": 26,
+      "name": "Rice Bran Oil",
+      "brand": "Sarvottam Ltd.",
+      "category": "Oil",
+      "price": 140,
+      "quantity": "1 Ltr",
+      "img": "assets/imgs/sarvotham rice bran oil.jpg"
+    },
+    {
+      "id": 27,
+      "name": "Fortune Sunlite Oil",
+      "brand": "Fortune",
+      "category": "Oil",
+      "price": 160,
+      "quantity": "1 Ltr",
+      "img": "assets/imgs/fortune sunlite oil.jpg"
+    },
+    {
+      "id": 28,
+      "name": "Fortune Soybean Oil",
+      "brand": "Fortune",
+      "category": "Oil",
+      "price": 155,
+      "quantity": "1 Ltr",
+      "img": "assets/imgs/fortune soyabean oil.jpg"
+    },
+    {
+      "id": 29,
+      "name": "Dhara Sunflower Oil",
+      "brand": "Dhara Oils",
+      "category": "Oil",
+      "price": 155,
+      "quantity": "1 Ltr",
+      "img": "assets/imgs/dhara sunflower oil.jpg"
+    },
+    {
+      "id": 30,
+      "name": "Dhara Soybean Oil",
+      "brand": "Dhara Oils",
+      "category": "Oil",
+      "price": 140,
+      "quantity": "1 Ltr",
+      "img": "assets/imgs/dhara soybean oil.jpg"
+    },
+    {
+      "id": 31,
+      "name": "Tata Sampann Toor Dal",
+      "brand": "TATA",
+      "category": "Pulses",
+      "price": 140,
+      "quantity": "1 Kg",
+      "img": "assets/imgs/tata toor dal.jpg"
+    },
+    {
+      "id": 32,
+      "name": "Tata Sampann Chana Dal",
+      "brand": "TATA",
+      "category": "Pulses",
+      "price": 130,
+      "quantity": "1 Kg",
+      "img": "assets/imgs/tata chana dal.jpg"
+    },
+    {
+      "id": 33,
+      "name": "Tata Sampann Dal Besan",
+      "brand": "TATA",
+      "category": "Pulses",
+      "price": 95,
+      "quantity": "1 Kg",
+      "img": "assets/imgs/tata dal besan.jpg"
+    },
+    {
+      "id": 34,
+      "name": "Tata Sampann Moong Dal",
+      "brand": "TATA",
+      "category": "Pulses",
+      "price": 134,
+      "quantity": "1 Kg",
+      "img": "assets/imgs/tata moong dal.jpg"
+    },
+    {
+      "id": 35,
+      "name": "Tata Sampann Urad Dal",
+      "brand": "TATA",
+      "category": "Pulses",
+      "price": 143,
+      "quantity": "1 Kg",
+      "img": "assets/imgs/tata urad dal.jpg"
+    },
+    {
+      "id": 36,
+      "name": "Aashirvaad Select Sharbati Atta",
+      "brand": "ITC Ltd.",
+      "category": "Flour",
+      "price": 285,
+      "quantity": "5 Kg",
+      "img": "assets/imgs/Aashirvaad Select Sharbati Atta.jpg"
+    },
+    {
+      "id": 37,
+      "name": "Aashirvaad Multigrain Atta",
+      "brand": "ITC Ltd.",
+      "category": "Flour",
+      "price": 300,
+      "quantity": "5 Kg",
+      "img": "assets/imgs/Aashirvaad Multigrain Atta.jpg"
+    },
+    {
+      "id": 38,
+      "name": "Fortune Atta",
+      "brand": "Fortune",
+      "category": "Flour",
+      "price": 275,
+      "quantity": "5 Kg",
+      "img": "assets/imgs/Fortune Atta.jpg"
+    },
+    {
+      "id": 39,
+      "name": "Fortune Multigrain Atta",
+      "brand": "Fortune",
+      "category": "Flour",
+      "price": 290,
+      "quantity": "5 Kg",
+      "img": "assets/imgs/Fortune Atta.jpg"
+    },
+    {
+      "id": 40,
+      "name": "Patanjali Multigrain Atta",
+      "brand": "Patanjali Ltd.",
+      "category": "Flour",
+      "price": 350,
+      "quantity": "5 Kg",
+      "img": "assets/imgs/patanjali multigrain atta.jpg"
+    },
+    {
+      "id": 41,
+      "name": "Patanjali Atta",
+      "brand": "Patanjali Ltd.",
+      "category": "Flour",
+      "price": 300,
+      "quantity": "5 Kg",
+      "img": "assets/imgs/patanjali atta.jpg"
+    }
+  ],
+  "orders": [
+    {
+      "name": "'Chappidi Raja Srinivas Reddy'",
+      "phno": "91234324",
+      "address": "hno: 245,oldstreet, koti, hyd, telangana, India",
+      "uid": "okuthi@123",
+      "pid": "2",
+      "id": 1
+    },
+    {
+      "name": "Chappidi Raja Srinivas Reddy",
+      "phno": "9876543210",
+      "address": "hno: 245,oldstreet, koti, hyd, telangana, India",
+      "uid": "okuthi@123",
+      "pid": 3,
+      "id": 2
+    },
+    {
+      "name": "hari",
+      "phno": "8765434567",
+      "address": "hno: 143,okay okay okay, koti, hyd, telangana, India",
+      "uid": "oknopo@876543",
+      "pid": 2,
+      "id": 3
+    }
+  ]
+}
