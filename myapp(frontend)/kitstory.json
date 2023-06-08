@@ -334,15 +334,6 @@
       "img": "assets/imgs/Aashirvaad Multigrain Atta.jpg"
     },
     {
-      "id": 38,
-      "name": "Fortune Atta",
-      "brand": "Fortune",
-      "category": "Flour",
-      "price": 275,
-      "quantity": "5 Kg",
-      "img": "assets/imgs/Fortune Atta.jpg"
-    },
-    {
       "id": 39,
       "name": "Fortune Multigrain Atta",
       "brand": "Fortune",
@@ -359,15 +350,6 @@
       "price": 350,
       "quantity": "5 Kg",
       "img": "assets/imgs/patanjali multigrain atta.jpg"
-    },
-    {
-      "id": 41,
-      "name": "Patanjali Atta",
-      "brand": "Patanjali Ltd.",
-      "category": "Flour",
-      "price": 300,
-      "quantity": "5 Kg",
-      "img": "assets/imgs/patanjali atta.jpg"
     }
   ],
   "orders": [
@@ -394,6 +376,45 @@
       "uid": "oknopo@876543",
       "pid": 2,
       "id": 3
+    },
+    {
+      "name": "Chappidi Raja Srinivas Reddy",
+      "phno": "1234567890",
+      "address": "hno: 245,oldstreet, koti, hyd, telangana, India",
+      "uid": "okuthi@098",
+      "pid": 1,
+      "id": 4
+    },
+    {
+      "name": "luffy",
+      "phno": "67890-12345",
+      "address": "unitedstreets of amsterdam",
+      "uid": "okberry@op",
+      "pid": 2,
+      "id": 5
+    },
+    {
+      "name": "",
+      "phno": "",
+      "address": "",
+      "uid": "",
+      "pid": 1,
+      "id": 6
+    },
+    {
+      "name": "hari",
+      "phno": "9876512340",
+      "address": "hno:108, thakshashila, india",
+      "uid": "oknopo@987651",
+      "pid": 1,
+      "id": 7
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "email": "sun@god.com",
+      "pwd": "n"
     }
   ]
 }

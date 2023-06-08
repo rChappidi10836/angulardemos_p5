@@ -1,13 +1,35 @@
 
 <div [ngSwitch]="condition">
 
+
+    <!-- admin -->
+    <div *ngSwitchCase="-1">
+        <app-kitadmin></app-kitadmin>
+    </div>
+
+    <!-- portals -->
+    <div class="portals" *ngSwitchCase="0">
+            <img src="https://media1.tenor.com/images/cf7e0007949a94f6c750fcb7fc952b4b/tenor.gif?itemid=16637219" alt="WELCOME">
+            <div class="row">
+                <button class="btn btn-primary" (click)="web()"> BUYIN</button>
+                
+                <button class="btn btn-primary" (click)="control()"> ADMIN</button>
+                
+            </div>
+    </div>
+
     <!-- home -->
     <div *ngSwitchCase="1">
         <div class="container">
+            <div class="text-right">
+                <button type="button" class="btn btn-success" (click)="portals()">BACK</button>
+            </div>
+            
             <div class="search">
             <input type="text" name="searchText" class="search"
                 placeholder="Search by item Name/ category/ company"
                 [(ngModel)]="searchText">
+            
             </div>    
             <div class="col content">
                 <app-productitem *ngFor="let item of items | filter:searchText" [item]="item"></app-productitem>

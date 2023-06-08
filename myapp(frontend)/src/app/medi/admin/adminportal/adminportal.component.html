@@ -8,13 +8,13 @@
     </nav>
 </div>
 
-<div class="center" *ngIf="!update && !addform" style="width: 400px">
+<div class="center" *ngIf="!update && !addform" style="width: auto">
     <button class="btn btn-warning" (click)="onaddform()"> ➕ADD ITEM</button>
-    <button class="btn btn-primary btn-round" (click)="back()">BACK</button>
+    <div class="text-right">
+    <button class="btn btn-danger btn-round" (click)="back()">LOGOUT</button></div>
 </div>
 
 <div class="row m-4" *ngIf="display && !addform && !update" style="display: flex; ">
-    <br>
     <div class="column" *ngFor="let x of meds">
         <div class="card">
            
@@ -37,6 +37,7 @@
             Remove
         </button>
     </div>
+    
 </div>
 
 <div class="center" *ngIf="addform" style="width: 400px">

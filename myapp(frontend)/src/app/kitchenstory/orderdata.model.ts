@@ -6,3 +6,9 @@ export interface Orderdata{
     uid: string;
     pid: string;
 }
+
+export interface creds{
+    id?:number;
+    email: string;
+    pwd: string;
+}

@@ -40,8 +40,10 @@ import { PayComponent } from './medi/pay/pay.component';
 import { SuccessComponent } from './medi/success/success.component';
 import { AdminComponent } from './medi/admin/admin.component';
 import { AdminportalComponent } from './medi/admin/adminportal/adminportal.component';
+import { KitadminComponent } from './kitchenstory/kitadmin/kitadmin.component';
 
 const appRoutes: Routes = [
+{path: '',component: KitchenstoryComponent},
 {path: 'home', component: HomeComponent},
 {path:'Products',component: ProductsComponent},
 {path:'Names',component: NamesComponent},
@@ -56,7 +58,7 @@ const appRoutes: Routes = [
 {path: 'blogposts',component: BlogpostsComponent},
 {path: 'QuizProj',component: QuizProjComponent},
 {path: 'BlogProj',component: BlogProjComponent},
-{path: '',component: KitchenstoryComponent},
+
 {path: 'ng2', component: Ng2SearchPipeModule}
 ];
 
@@ -98,6 +100,7 @@ const appRoutes: Routes = [
     SuccessComponent,
     AdminComponent,
     AdminportalComponent,
+    KitadminComponent,
  
   ],
   imports: [BrowserModule,FormsModule, RouterModule.forRoot(appRoutes), HttpClientModule, Ng2SearchPipeModule],

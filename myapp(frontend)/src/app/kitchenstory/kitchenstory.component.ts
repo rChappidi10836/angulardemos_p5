@@ -13,9 +13,10 @@ export class KitchenstoryComponent implements OnInit {
   items: ItemData[]=[];
   order: Orderdata;
   searchText: any;
-  condition: number=1;
+  condition: number=0;
   id;
   item;
+  admin=false;
 
 
   constructor(private ks:kitchenstoryservice) { }
@@ -69,5 +70,16 @@ export class KitchenstoryComponent implements OnInit {
     this.condition =3;
   }
 
+
+  web(){
+    this.condition=1;
+  }
+
+  control(){
+    this.condition=-1;
+  }
   
+  portals(){
+    this.condition=0;
+  }
 }

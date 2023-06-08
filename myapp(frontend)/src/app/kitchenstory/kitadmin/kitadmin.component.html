@@ -1,0 +1,122 @@
+
+<div class="login" *ngIf="!logged">
+    <section class="vh-100">
+        <div class="container py-5 h-100">
+          <div class="row d-flex align-items-center justify-content-center h-100">
+            <div class="col-md-8 col-lg-7 col-xl-6">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+                class="img-fluid" alt="Phone image">
+            </div>
+            <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+              <div *ngIf="logagain">
+                PASSWORD CHANGED LOG AGAIN
+              </div>
+              <div class="text-center">
+                ADMIN LOGIN
+              </div>
+              <form #f="ngForm">
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form1Example13">Email address</label>
+                    <input type="email" name="email" id="form1Example13" class="form-control form-control-lg" ngModel required/>
+                </div>
+      
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form1Example23">Password</label>
+                    <input type="password" name="pwd" id="form1Example23" class="form-control form-control-lg" ngModel required/>
+                </div>
+      
+                <div *ngIf="check">
+                  wrong credentials
+                </div>
+
+
+      
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-lg btn-block" (click)="adminlogin(f.value)">Sign in</button>
+      
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+</div>
+
+<div *ngIf="logged">
+    <div class="text-right">
+      <button *ngIf="condition=='home'; else e" type="button" class="btn btn-danger" (click)="logout()">LOGOUT</button>
+      <ng-template #e><button type="button" class="btn btn-success" (click)="features()">HOME</button></ng-template>
+    </div>
+  <div [ngSwitch]="condition">
+    <div *ngSwitchCase="'home'" class="text-center">
+      <BUTTON class="btn btn-primary" (click)="pwdch()">PASSWORD CHANGE</BUTTON>&nbsp;
+      <BUTTON class="btn btn-primary" (click)="addordel()">PRODUCTS</BUTTON>
+    </div>
+    <div *ngSwitchCase="'pwd'">
+
+
+      <div [ngSwitch]="pwdcond">
+        <text *ngSwitchCase="1">New Password can't be same as Current Password</text>
+        <text *ngSwitchCase="2">Entered Current Password is incorrect</text>
+      </div><br>
+        Enter current pwd : <input type="text" name="cpwd" placeholder="Current Password" #cpwd><br>
+        Enter new pwd (remember) : <input type="text" name="newpwd" placeholder="New Password" #newpwd><br>
+        <button class="btn btn-primary" type="submit" (click)="changepwd(cpwd.value,newpwd.value)"> CHANGE </button>
+      
+    </div>
+    <div *ngSwitchCase="'add/remove'">
+      <div class="text-center">
+        <BUtton *ngIf="!add;" class="btn btn-warning" (click)="addit()">➕ADD ITEM</BUtton>
+        <BUtton *ngIf="add" class="btn btn-danger" (click)="addit()">cancel</BUtton>
+      </div><br>
+<form #r="ngForm">
+      <table class="table align-middle mb-0 bg-white"
+      style="table-layout: fixed; width: 100%;">
+      <thead class="bg-light">
+        <tr>
+          <th>Product id</th>
+          <th>Name</th>
+          <th>Brand</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Image</th>
+          <th></th>
+        </tr>
+      </thead>
+      
+        <tr *ngIf="add">
+          
+          <td>Enter respective values to add</td>
+          <td><input type="text" name="name" placeholder="item name" ngModel required></td>
+          <td><input type="text" name="brand" placeholder="BRAND" ngModel required></td>
+          <td><input type="text" name="category" placeholder="Category" ngModel required></td>
+          <td><input type="text" name="price" placeholder="Price" ngModel required></td>
+          <td><input type="text" name="quantity" placeholder="Quantity" ngModel required></td>
+          <td><input type="text" name="img" placeholder="enter img link" ngModel required></td>
+          <td>
+            <button class="btn btn-success" type="submit" (click)="addite(r.value)">ADD</button>
+          </td>
+        </tr>
+      
+			<tr *ngFor="let product of items">
+				<td>{{product.id}}</td>
+				<td>{{product.name}}</td>
+				<td>{{product.brand}}</td>
+        <td>{{product.category}}</td>
+				<td>{{product.price}}</td>
+        <td>{{product.quantity}}</td>
+				<td><img [src]="product.img" alt="{{product.name}} image"
+					style="display: block; width: 75%; height: auto;"></td>
+				
+				<td><button class="btn btn-danger"
+					style="font-size: 16px; font-weight: bold; color: white" (click)="delete(product.id)">🗑️DELETE</button></td>
+				
+			</tr>
+		
+	  </table></form>
+    </div>
+    
+  </div>
+</div>

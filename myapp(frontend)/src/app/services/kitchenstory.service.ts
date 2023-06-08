@@ -14,6 +14,7 @@ export class kitchenstoryservice {
     constructor(private httpclient:HttpClient){}
     private iurl: string = 'http://localhost:3000/items';
     private ourl: string = 'http://localhost:3000/orders';
+    private aurl: string = 'http://localhost:3000/admin';
     getData(){
     }
 
@@ -30,12 +31,12 @@ export class kitchenstoryservice {
             // console.log(key);
        postsarray.push({...responsedata[key]})
        }
-    //    console.log('postarray');
-    //    console.log(postsarray);
-       return postsarray
-       }
-       ))
-       }
+    //console.log('postarray');
+    //console.log(postsarray);
+    return postsarray
+    }
+    ))
+    }
 
        fetchid(id){
         console.log("fetchid called");
@@ -74,5 +75,31 @@ export class kitchenstoryservice {
             this.ourl, body
             
         ).subscribe();
+      }
+
+      getadmin(){
+        return this.httpclient.get(this.aurl).pipe(
+            map((responsedata)=>{
+            const postsarray=[]
+          
+            for(const key in responsedata){
+           postsarray.push({...responsedata[key]})
+           }
+       
+        return postsarray
+        }
+        ));
+      }
+            
+      updateadmin(k){
+        this.httpclient.patch(this.aurl+"/1",k).subscribe();
+      }
+
+      additem(item){
+        return this.httpclient.post(this.iurl,item);
+      }
+
+      deleteid(id){
+        return this.httpclient.delete(this.iurl+"/"+id);
       }
 }
